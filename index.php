@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
 
-    <title>Bootstrap demo</title>
+    <title>Cadastro</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col mt-5">
                 <?php
-                include("config.php");  
+                include("config.php"); //arquivo de conexção com o banco de dados
                 switch (@$_REQUEST["page"]) {
                     case "novo":
                         include("novo-usuario.php");
@@ -48,7 +48,7 @@
                         include("listar-usuario.php");
                         break;
                     case "salvar";
-                        include("salvar-usuario");
+                        include("salvar-usuario.php");
                         break;
                     case "editar";
                         include("editar-usuario.php");
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

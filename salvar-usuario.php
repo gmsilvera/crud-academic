@@ -9,7 +9,6 @@ switch ($_REQUEST["acao"]) {
         $sql = "INSERT INTO usuarios (nome, email, senha, data_nasc) VALUES ('{$nome}', '{$email}', '{$senha}', '{$data_nasc}')";
 
         $res = $conn->query($sql);
-        dd($res);
 
         if ($res == true) {
             print "<script>alert('Cadastro com sucesso');</script>";
