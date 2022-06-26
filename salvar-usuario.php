@@ -30,16 +30,15 @@ switch ($_REQUEST["acao"]) {
         senha='{$senha}',
         data_nasc='{$data_nasc}'
         WHERE
-        id=" . $_REQUERT["id"];
+        id=" . $_REQUEST["id"];
 
         $res = $conn->query($sql);
 
         if ($res == true) {
             print "<script>alert('Editado com sucesso');</script>";
-            print "<script>alert('Cadastro com sucesso');</script>";
             print "<script>location.href='?page=listar';</script>";
         } else {
-            print "<script>alert('Não foi possível cadastrar');</script>";
+            print "<script>alert('Não foi possível editar');</script>";
             print "<script>location.href='?page=listar';</script>";
         }
 
@@ -51,7 +50,6 @@ switch ($_REQUEST["acao"]) {
 
         if ($res == true) {
             print "<script>alert('Excluído com sucesso');</script>";
-            print "<script>alert('Cadastro com sucesso');</script>";
             print "<script>location.href='?page=listar';</script>";
         } else {
             print "<script>alert('Não foi possível excluir');</script>";

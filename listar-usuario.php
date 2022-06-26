@@ -13,11 +13,11 @@ $qtd = $res->num_rows;
 if ($qtd > 0) {
     print "<table class='table table-hover table-striped table-bordered'>";
     print "<tr>";
-    print "<td>#</td>";
-    print "<td>Nome</td>";
-    print "<td>E-mail</td>";
-    print "<td>Data de nascimento</td>";
-    print "<td>Ações</td>";
+    print "<th>#</th>";
+    print "<th>Nome</th>";
+    print "<th>E-mail</th>";
+    print "<th>Data de nascimento</th>";
+    print "<th>Ações</th>";
     print "</tr>";
 
     while ($row = $res->fetch_object()) {
